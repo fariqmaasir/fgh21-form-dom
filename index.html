@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body form {
+        display: flex;
+        flex-direction: column;
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="form"></form>
+  </body>
+  <script>
+    const form = document.getElementById("form");
+    let labelName = document.createElement("label");
+    labelName.setAttribute("for", "inputName");
+    labelName.textContent = "Siapa Nama Anda?";
+    let inputName = document.createElement("input");
+    inputName.setAttribute("id", "inputName");
+    inputName.setAttribute("type", "text");
+    form.appendChild(labelName);
+    form.appendChild(inputName);
+    //
+    let labelAge = document.createElement("label");
+    labelAge.setAttribute("for", "inputAge");
+    labelAge.textContent = "Berapa Umur Anda?";
+    let inputAge = document.createElement("input");
+    inputAge.setAttribute("id", "inputAge");
+    inputAge.setAttribute("type", "text");
+    form.appendChild(labelAge);
+    form.appendChild(inputAge);
+    //
+    //label title
+    let labelGender = document.createElement("label");
+    labelGender.textContent = "Apa Jenis Kelamin Anda?";
+    //label title
+
+    const divGender = document.createElement("div");
+    //label male
+    let inputGenderMale = document.createElement("input");
+    inputGenderMale.setAttribute("type", "radio");
+    inputGenderMale.setAttribute("value", "Laki-laki");
+    inputGenderMale.setAttribute("id", "inputGenderMale");
+    inputGenderMale.setAttribute("name", "gender");
+    let labelGenderMale = document.createElement("label");
+    labelGenderMale.setAttribute("for", "inputGenderMale");
+    labelGenderMale.textContent = "Laki-laki";
+    form.appendChild(labelGender);
+    divGender.appendChild(inputGenderMale);
+    divGender.appendChild(labelGenderMale);
+
+    //label female
+    let inputGenderFeMale = document.createElement("input");
+    inputGenderFeMale.setAttribute("type", "radio");
+    inputGenderFeMale.setAttribute("value", "Perempuan");
+    inputGenderFeMale.setAttribute("id", "inputGenderFeMale");
+    inputGenderFeMale.setAttribute("name", "gender");
+    let labelGenderFeMale = document.createElement("label");
+    labelGenderFeMale.setAttribute("for", "inputGenderFeMale");
+    labelGenderFeMale.textContent = "Perempuan";
+    divGender.appendChild(inputGenderFeMale);
+    divGender.appendChild(labelGenderFeMale);
+    form.appendChild(divGender);
+
+    //label title
+    let labelSmoke = document.createElement("label");
+    labelSmoke.textContent = "Apakah Anda Perokok?";
+    //label title
+
+    const divSmoke = document.createElement("div");
+    //label yes
+    let inputSmokeYes = document.createElement("input");
+    inputSmokeYes.setAttribute("type", "radio");
+    inputSmokeYes.setAttribute("value", "Ya");
+    inputSmokeYes.setAttribute("id", "inputSmokeYes");
+    inputSmokeYes.setAttribute("name", "smoke");
+    let labelSmokeYes = document.createElement("label");
+    labelSmokeYes.setAttribute("for", "inputSmokeYes");
+    labelSmokeYes.textContent = "Ya";
+    form.appendChild(labelSmoke);
+    divSmoke.appendChild(inputSmokeYes);
+    divSmoke.appendChild(labelSmokeYes);
+
+    //label no
+    let inputSmokeNo = document.createElement("input");
+    inputSmokeNo.setAttribute("type", "radio");
+    inputSmokeNo.setAttribute("value", "Tidak");
+    inputSmokeNo.setAttribute("id", "inputSmokeNo");
+    inputSmokeNo.setAttribute("name", "smoke");
+    let labelSmokeNo = document.createElement("label");
+    labelSmokeNo.setAttribute("for", "inputSmokeNo");
+    labelSmokeNo.textContent = "Tidak";
+    divSmoke.appendChild(inputSmokeNo);
+    divSmoke.appendChild(labelSmokeNo);
+    form.appendChild(divSmoke);
+
+    //label title
+    let labelSmokeProduct = document.createElement("label");
+    labelSmokeProduct.textContent = "Apakah Anda Perokok?";
+    //label title
+
+    const divSmoke1 = document.createElement("div");
+    let inputSmoke1 = document.createElement("input");
+    inputSmoke1.setAttribute("type", "checkbox");
+    inputSmoke1.setAttribute("value", "Gudang Garam Filter ");
+    inputSmoke1.setAttribute("id", "inputSmoke1");
+    inputSmoke1.setAttribute("name", "cigar");
+    let labelSmoke1 = document.createElement("label");
+    labelSmoke1.setAttribute("for", "inputSmoke1");
+    labelSmoke1.textContent = "Gudang Garam Filter";
+    form.appendChild(labelSmokeProduct);
+    divSmoke1.appendChild(inputSmoke1);
+    divSmoke1.appendChild(labelSmoke1);
+    form.appendChild(divSmoke1);
+
+    const divSmoke2 = document.createElement("div");
+    let inputSmoke2 = document.createElement("input");
+    inputSmoke2.setAttribute("type", "checkbox");
+    inputSmoke2.setAttribute("value", "Lucky Strike ");
+    inputSmoke2.setAttribute("id", "inputSmoke2");
+    inputSmoke2.setAttribute("name", "cigar");
+    let labelSmoke2 = document.createElement("label");
+    labelSmoke2.setAttribute("for", "inputSmoke2");
+    labelSmoke2.textContent = "Lucky Strike";
+    divSmoke2.appendChild(inputSmoke2);
+    divSmoke2.appendChild(labelSmoke2);
+    form.appendChild(divSmoke2);
+
+    const divSmoke3 = document.createElement("div");
+    let inputSmoke3 = document.createElement("input");
+    inputSmoke3.setAttribute("type", "checkbox");
+    inputSmoke3.setAttribute("value", "Marlboro ");
+    inputSmoke3.setAttribute("id", "inputSmoke3");
+    inputSmoke3.setAttribute("name", "cigar");
+    let labelSmoke3 = document.createElement("label");
+    labelSmoke3.setAttribute("for", "inputSmoke3");
+    labelSmoke3.textContent = "Marlboro";
+    divSmoke3.appendChild(inputSmoke3);
+    divSmoke3.appendChild(labelSmoke3);
+    form.appendChild(divSmoke3);
+
+    const divSmoke4 = document.createElement("div");
+    let inputSmoke4 = document.createElement("input");
+    inputSmoke4.setAttribute("type", "checkbox");
+    inputSmoke4.setAttribute("value", "Esse ");
+    inputSmoke4.setAttribute("id", "inputSmoke4");
+    inputSmoke4.setAttribute("name", "cigar");
+    let labelSmoke4 = document.createElement("label");
+    labelSmoke4.setAttribute("for", "inputSmoke4");
+    labelSmoke4.textContent = "Esse";
+    divSmoke4.appendChild(inputSmoke4);
+    divSmoke4.appendChild(labelSmoke4);
+    form.appendChild(divSmoke4);
+
+    const button = document.createElement("button");
+    button.setAttribute("type", "submit");
+    button.setAttribute("onclick", "getData(event)");
+    button.textContent = "Submit";
+    form.appendChild(button);
+
+    //table
+    const table = document.createElement("table");
+    const tableRow = document.createElement("tr");
+    const tableRow1 = document.createElement("td");
+    tableRow1.textContent = "Name";
+    const tableRow2 = document.createElement("td");
+    tableRow2.textContent = "Age";
+    const tableRow3 = document.createElement("td");
+    tableRow3.textContent = "Gender";
+    const tableRow4 = document.createElement("td");
+    tableRow4.textContent = "Is respondent smoker";
+    const tableRow5 = document.createElement("td");
+    tableRow5.textContent = "Cigar variant that respondent have try";
+    tableRow.appendChild(tableRow1);
+    tableRow.appendChild(tableRow2);
+    tableRow.appendChild(tableRow3);
+    tableRow.appendChild(tableRow4);
+    tableRow.appendChild(tableRow5);
+    table.appendChild(tableRow);
+
+    //function
+    function getData(event) {
+      event.preventDefault();
+      const tr = document.createElement("tr");
+      const name = document.getElementById("inputName").value;
+      if (name !== "") {
+        const td = document.createElement("td");
+        td.textContent = name;
+        tr.appendChild(td);
+      }
+      const age = document.getElementById("inputAge").value;
+      if (name !== "") {
+        const td = document.createElement("td");
+        td.textContent = age;
+        tr.appendChild(td);
+      }
+      const gender = document.getElementsByName("gender");
+      for (i = 0; i < gender.length; i++) {
+        if (gender[i].checked) {
+          const td = document.createElement("td");
+          td.textContent = gender[i].value;
+          tr.appendChild(td);
+        }
+      }
+      const smoke = document.getElementsByName("smoke");
+      for (i = 0; i < smoke.length; i++) {
+        if (smoke[i].checked) {
+          const td = document.createElement("td");
+          td.textContent = smoke[i].value;
+          tr.appendChild(td);
+        }
+      }
+      const cigarProduct = document.getElementsByName("cigar");
+      const td = document.createElement("td");
+      let container = "";
+      for (let i = 0; i < cigarProduct.length; i++) {
+        console.log(cigarProduct[i].value);
+        if (cigarProduct[i].checked) {
+          container += cigarProduct[i].value;
+          td.textContent = container;
+        }
+        tr.appendChild(td);
+      }
+      table.appendChild(tr);
+    }
+    document.body.appendChild(table);
+  </script>
+</html>
